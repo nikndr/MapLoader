@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="KGk-i7-Jjw" customClass="DownloadMapTableViewCell" customModule="MapLoader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_custom_show_on_map" translatesAutoresizingMaskIntoConstraints="NO" id="tej-Tv-Em1">
+                        <rect key="frame" x="16" y="6" width="30" height="32"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bavaria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eak-7b-NLY" userLabel="RegionName">
+                        <rect key="frame" x="65" y="6" width="56" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWr-Hp-yjE" userLabel="DownloadMapButton">
+                        <rect key="frame" x="331" y="7" width="30" height="30"/>
+                        <state key="normal" image="ic_custom_import"/>
+                        <connections>
+                            <action selector="downloadButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sbu-1W-Kip"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di6-hM-5PF" userLabel="ProgressBar">
+                        <rect key="frame" x="65" y="30.5" width="232" height="1.5"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.45882352941176469" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tej-Tv-Em1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="E9h-Xz-GOT"/>
+                    <constraint firstAttribute="trailing" secondItem="SWr-Hp-yjE" secondAttribute="trailing" constant="16" id="EaP-3i-jWF"/>
+                    <constraint firstItem="di6-hM-5PF" firstAttribute="leading" secondItem="tej-Tv-Em1" secondAttribute="trailing" constant="19" id="Jhm-AI-WKh"/>
+                    <constraint firstItem="tej-Tv-Em1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Kne-mP-lTu"/>
+                    <constraint firstItem="Eak-7b-NLY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Pwk-T4-IWL"/>
+                    <constraint firstAttribute="bottom" secondItem="di6-hM-5PF" secondAttribute="bottom" constant="12" id="T37-is-Gky"/>
+                    <constraint firstItem="SWr-Hp-yjE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="TEs-Pv-dlh"/>
+                    <constraint firstItem="di6-hM-5PF" firstAttribute="top" secondItem="Eak-7b-NLY" secondAttribute="bottom" constant="4" id="UyK-tj-jIM"/>
+                    <constraint firstAttribute="bottom" secondItem="tej-Tv-Em1" secondAttribute="bottom" constant="6" id="gnO-s5-5IO"/>
+                    <constraint firstItem="Eak-7b-NLY" firstAttribute="leading" secondItem="tej-Tv-Em1" secondAttribute="trailing" constant="19" id="it4-cx-ht4"/>
+                    <constraint firstItem="SWr-Hp-yjE" firstAttribute="leading" secondItem="di6-hM-5PF" secondAttribute="trailing" constant="34" id="rUm-RM-pqb"/>
+                    <constraint firstAttribute="bottom" secondItem="SWr-Hp-yjE" secondAttribute="bottom" constant="7" id="u3Z-OK-2zv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="downloadButton" destination="SWr-Hp-yjE" id="F2r-F6-Ra0"/>
+                <outlet property="progressBarBottomConstraint" destination="T37-is-Gky" id="DI7-JU-WJu"/>
+                <outlet property="progressBarView" destination="di6-hM-5PF" id="ua8-ou-DbL"/>
+                <outlet property="regionNameLabel" destination="Eak-7b-NLY" id="Ero-cI-8rs"/>
+                <outlet property="regionNameTopConstraint" destination="Pwk-T4-IWL" id="T0F-P6-Ulc"/>
+            </connections>
+            <point key="canvasLocation" x="90.579710144927546" y="163.39285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_custom_import" width="30" height="30"/>
+        <image name="ic_custom_show_on_map" width="30" height="30"/>
+    </resources>
+</document>

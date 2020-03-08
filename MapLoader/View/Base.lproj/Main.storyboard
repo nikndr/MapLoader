@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hcf-48-MWn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Download Maps-->
+        <scene sceneID="cmX-p2-Fwo">
+            <objects>
+                <tableViewController title="Download Maps" id="QLn-od-ibe" customClass="CountryTableViewController" customModule="MapLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aiO-qA-yd1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="g7z-BF-GJw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device memory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTB-uM-CbB">
+                                    <rect key="frame" x="15" y="11" width="120" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free: 33.66 GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-fS-1zu">
+                                    <rect key="frame" x="282" y="11" width="116" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-r5-DdK">
+                                    <rect key="frame" x="16" y="36" width="382" height="16"/>
+                                    <color key="backgroundColor" red="1" green="0.53333333329999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="8Mg-Cq-4KJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lrG-fS-1zu" secondAttribute="trailing" constant="16" id="4tl-09-SLx"/>
+                                <constraint firstItem="CTB-uM-CbB" firstAttribute="top" secondItem="g7z-BF-GJw" secondAttribute="top" constant="11" id="H2q-6V-QFr"/>
+                                <constraint firstItem="RgA-r5-DdK" firstAttribute="top" secondItem="CTB-uM-CbB" secondAttribute="bottom" constant="9" id="L9Q-DT-d8i"/>
+                                <constraint firstItem="CTB-uM-CbB" firstAttribute="leading" secondItem="g7z-BF-GJw" secondAttribute="leading" constant="15" id="LeP-Qa-va5"/>
+                                <constraint firstAttribute="bottom" secondItem="RgA-r5-DdK" secondAttribute="bottom" constant="12" id="PjY-Wl-s1A"/>
+                                <constraint firstAttribute="trailing" secondItem="RgA-r5-DdK" secondAttribute="trailing" constant="16" id="Rm5-Mr-Xwb"/>
+                                <constraint firstItem="lrG-fS-1zu" firstAttribute="top" secondItem="g7z-BF-GJw" secondAttribute="top" constant="11" id="WeG-g3-9GA"/>
+                                <constraint firstItem="RgA-r5-DdK" firstAttribute="leading" secondItem="g7z-BF-GJw" secondAttribute="leading" constant="16" id="jH2-mz-u0H"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" id="7gO-WM-rMJ">
+                                <rect key="frame" x="0.0" y="92" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7gO-WM-rMJ" id="zKq-qn-zFe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QLn-od-ibe" id="KVF-QU-0mq"/>
+                            <outlet property="delegate" destination="QLn-od-ibe" id="nfu-7u-IRy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Download Maps" largeTitleDisplayMode="always" id="2dD-aa-TfW"/>
+                    <connections>
+                        <outlet property="freeStorageLabel" destination="lrG-fS-1zu" id="56R-dY-VYx"/>
+                        <outlet property="storageBarView" destination="RgA-r5-DdK" id="C6Z-iC-meK"/>
+                        <segue destination="cQD-1c-yS7" kind="show" identifier="countrySegue" id="pWJ-gn-Bi0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekT-A7-W1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294.2028985507247" y="255.80357142857142"/>
+        </scene>
+        <!--CountryName-->
+        <scene sceneID="Elb-Dh-FPo">
+            <objects>
+                <tableViewController id="cQD-1c-yS7" customClass="RegionTableViewController" customModule="MapLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Qc-6c-bfx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="M13-Ar-RRk">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M13-Ar-RRk" id="x7f-Na-uw2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cQD-1c-yS7" id="d9J-R9-YE9"/>
+                            <outlet property="delegate" destination="cQD-1c-yS7" id="1Se-mO-ptQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="CountryName" largeTitleDisplayMode="never" id="soA-Qk-cHa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xZ3-YF-Cia"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czo-g8-dnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="256"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9gK-C9-gqX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hcf-48-MWn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cnZ-p2-KTe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QLn-od-ibe" kind="relationship" relationship="rootViewController" id="x0O-F4-CyD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn1-T3-nn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.05797101449281" y="255.80357142857142"/>
+        </scene>
+    </scenes>
+</document>

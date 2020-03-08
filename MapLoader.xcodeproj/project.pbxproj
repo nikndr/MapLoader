@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4B6E42C241517FE007D43FB /* NextScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6E42A241517FE007D43FB /* NextScreenTableViewCell.swift */; };
+		D4B6E42D241517FE007D43FB /* NextScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B6E42B241517FE007D43FB /* NextScreenTableViewCell.xib */; };
+		D4C6527824150FF0000E6D7D /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6527724150FF0000E6D7D /* RegionTableViewController.swift */; };
+		D4C6527B24151076000E6D7D /* DownloadMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6527924151076000E6D7D /* DownloadMapTableViewCell.swift */; };
+		D4C6527C24151076000E6D7D /* DownloadMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C6527A24151076000E6D7D /* DownloadMapTableViewCell.xib */; };
 		D4F63226241504B700604416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F63225241504B700604416 /* AppDelegate.swift */; };
 		D4F63228241504B700604416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F63227241504B700604416 /* SceneDelegate.swift */; };
-		D4F6322A241504B700604416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F63229241504B700604416 /* ViewController.swift */; };
 		D4F6322D241504B700604416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F6322B241504B700604416 /* Main.storyboard */; };
 		D4F6322F241504BB00604416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F6322E241504BB00604416 /* Assets.xcassets */; };
 		D4F63232241504BB00604416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F63230241504BB00604416 /* LaunchScreen.storyboard */; };
+		D4F6323A241505C000604416 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F63239241505C000604416 /* CountryTableViewController.swift */; };
+		D4F63240241506A100604416 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6323F241506A100604416 /* Constants.swift */; };
+		D4F63242241507A000604416 /* MapRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F63241241507A000604416 /* MapRegion.swift */; };
+		D4FAB12124152C6B0091A1ED /* RegionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FAB12024152C6B0091A1ED /* RegionHeaderView.swift */; };
+		D4FAB12524152DC60091A1ED /* RegionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4FAB12424152DC60091A1ED /* RegionHeaderView.xib */; };
+		D4FAB128241539B80091A1ED /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D4FAB127241539B80091A1ED /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4B6E42A241517FE007D43FB /* NextScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenTableViewCell.swift; sourceTree = "<group>"; };
+		D4B6E42B241517FE007D43FB /* NextScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextScreenTableViewCell.xib; sourceTree = "<group>"; };
+		D4C6527724150FF0000E6D7D /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
+		D4C6527924151076000E6D7D /* DownloadMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadMapTableViewCell.swift; sourceTree = "<group>"; };
+		D4C6527A24151076000E6D7D /* DownloadMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadMapTableViewCell.xib; sourceTree = "<group>"; };
 		D4F63222241504B700604416 /* MapLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F63225241504B700604416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4F63227241504B700604416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4F63229241504B700604416 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4F6322C241504B700604416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4F6322E241504BB00604416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4F63231241504BB00604416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4F63233241504BB00604416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4F63239241505C000604416 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		D4F6323F241506A100604416 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4F63241241507A000604416 /* MapRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegion.swift; sourceTree = "<group>"; };
+		D4FAB12024152C6B0091A1ED /* RegionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionHeaderView.swift; sourceTree = "<group>"; };
+		D4FAB12424152DC60091A1ED /* RegionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionHeaderView.xib; sourceTree = "<group>"; };
+		D4FAB127241539B80091A1ED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,49 @@
 		D4F63224241504B700604416 /* MapLoader */ = {
 			isa = PBXGroup;
 			children = (
-				D4F63225241504B700604416 /* AppDelegate.swift */,
-				D4F63227241504B700604416 /* SceneDelegate.swift */,
-				D4F63229241504B700604416 /* ViewController.swift */,
-				D4F6322B241504B700604416 /* Main.storyboard */,
+				D4F6323D241505D800604416 /* Controller */,
+				D4F6323C241505D300604416 /* View */,
+				D4F6323B241505CA00604416 /* Model */,
 				D4F6322E241504BB00604416 /* Assets.xcassets */,
-				D4F63230241504BB00604416 /* LaunchScreen.storyboard */,
 				D4F63233241504BB00604416 /* Info.plist */,
+				D4FAB127241539B80091A1ED /* .gitignore */,
 			);
 			path = MapLoader;
+			sourceTree = "<group>";
+		};
+		D4F6323B241505CA00604416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4F63241241507A000604416 /* MapRegion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4F6323C241505D300604416 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4F63230241504BB00604416 /* LaunchScreen.storyboard */,
+				D4F6322B241504B700604416 /* Main.storyboard */,
+				D4C6527924151076000E6D7D /* DownloadMapTableViewCell.swift */,
+				D4C6527A24151076000E6D7D /* DownloadMapTableViewCell.xib */,
+				D4B6E42A241517FE007D43FB /* NextScreenTableViewCell.swift */,
+				D4B6E42B241517FE007D43FB /* NextScreenTableViewCell.xib */,
+				D4FAB12024152C6B0091A1ED /* RegionHeaderView.swift */,
+				D4FAB12424152DC60091A1ED /* RegionHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4F6323D241505D800604416 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4F63225241504B700604416 /* AppDelegate.swift */,
+				D4F63227241504B700604416 /* SceneDelegate.swift */,
+				D4F63239241505C000604416 /* CountryTableViewController.swift */,
+				D4F6323F241506A100604416 /* Constants.swift */,
+				D4C6527724150FF0000E6D7D /* RegionTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F63232241504BB00604416 /* LaunchScreen.storyboard in Resources */,
+				D4FAB128241539B80091A1ED /* .gitignore in Resources */,
 				D4F6322F241504BB00604416 /* Assets.xcassets in Resources */,
 				D4F6322D241504B700604416 /* Main.storyboard in Resources */,
+				D4B6E42D241517FE007D43FB /* NextScreenTableViewCell.xib in Resources */,
+				D4C6527C24151076000E6D7D /* DownloadMapTableViewCell.xib in Resources */,
+				D4FAB12524152DC60091A1ED /* RegionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F6322A241504B700604416 /* ViewController.swift in Sources */,
+				D4C6527B24151076000E6D7D /* DownloadMapTableViewCell.swift in Sources */,
 				D4F63226241504B700604416 /* AppDelegate.swift in Sources */,
+				D4B6E42C241517FE007D43FB /* NextScreenTableViewCell.swift in Sources */,
 				D4F63228241504B700604416 /* SceneDelegate.swift in Sources */,
+				D4F6323A241505C000604416 /* CountryTableViewController.swift in Sources */,
+				D4FAB12124152C6B0091A1ED /* RegionHeaderView.swift in Sources */,
+				D4C6527824150FF0000E6D7D /* RegionTableViewController.swift in Sources */,
+				D4F63242241507A000604416 /* MapRegion.swift in Sources */,
+				D4F63240241506A100604416 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
