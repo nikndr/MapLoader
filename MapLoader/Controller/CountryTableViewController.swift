@@ -11,28 +11,29 @@ import UIKit
 class CountryTableViewController: UITableViewController {
     // MARK: - Properties
     
-    let regions: [MapRegion] = [MapRegion(name: "Albania", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Andora", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Austria", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Azores", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Bosnia", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Bulgaria", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "France", subregions: nil, isMapDownloaded: false),
-                                MapRegion(name: "Germany", subregions:
-                                    [MapRegion(name: "Bavaria", subregions: nil, isMapDownloaded: false), MapRegion(name: "Hamburg", subregions: nil, isMapDownloaded: false), MapRegion(name: "Berlin", subregions: nil, isMapDownloaded: true)], isMapDownloaded: false)]
+    var mapLoader: MapLoader! {
+        didSet {
+            updateViewFromModel()
+        }
+    }
+    
     var selectedIndex: Int!
     
     // MARK: - Outlets
     
     @IBOutlet var freeStorageLabel: UILabel!
-    @IBOutlet var storageBarView: UIView!
-    
+    @IBOutlet weak var storageBarView: UIRoundedProgressView!
+        
     // MARK: - Life cycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapLoader = MapLoader()
         configureUI()
         registerTableViewCells()
+        
+        print(UIDevice.current.totalDiskSpaceInGB)
+        print(UIDevice.current.freeDiskSpaceInGB)
     }
     
     func registerTableViewCells() {
@@ -50,18 +51,24 @@ class CountryTableViewController: UITableViewController {
     // MARK: - UI configuration
     
     func configureUI() {
+        storageBarView.layer.masksToBounds = true
         storageBarView.layer.cornerRadius = storageBarView.bounds.size.height / 2
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    func updateViewFromModel() {
+        freeStorageLabel.text = UIDevice.current.freeDiskSpaceInGB
+        let freeSpaceRatio = Float(UIDevice.current.usedDiskSpaceInBytes) / Float(UIDevice.current.totalDiskSpaceInBytes)
+        storageBarView.progress = freeSpaceRatio
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueIdentifiers.countrySegue {
-            guard let destinationViewController = segue.destination as? RegionTableViewController else {
-                fatalError("prepare(for segue:): Destination VC is invalid")
+            if let destinationViewController = segue.destination as? RegionTableViewController {
+                destinationViewController.region = MapLoader.regions[selectedIndex]
             }
-            destinationViewController.region = regions[selectedIndex]
         }
     }
 }
@@ -75,16 +82,16 @@ extension CountryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return regions.count
+        return MapLoader.regions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier: String
-        let region = regions[indexPath.row]
-        if regions[indexPath.row].subregions == nil {
+        let region = MapLoader.regions[indexPath.row]
+        if MapLoader.regions[indexPath.row].subregions == nil {
             identifier = CellIdentifiers.downloadCell
             guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? DownloadMapTableViewCell else {
-                fatalError("tableView(cellForRowAt: \(indexPath)")
+                fatalError("tableView(cellForRowAt: \(indexPath))")
             }
             cell.regionNameLabel.text = region.name
             return cell
@@ -104,7 +111,7 @@ extension CountryTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
-        if regions[selectedIndex].subregions != nil {
+        if MapLoader.regions[selectedIndex].subregions != nil {
             performSegue(withIdentifier: SegueIdentifiers.countrySegue, sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)

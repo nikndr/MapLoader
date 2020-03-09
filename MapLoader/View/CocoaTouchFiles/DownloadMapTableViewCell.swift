@@ -17,12 +17,12 @@ class DownloadMapTableViewCell: UITableViewCell {
     
     @IBOutlet var regionNameLabel: UILabel!
     @IBOutlet var downloadButton: UIButton!
-    @IBOutlet var progressBarView: UIView!
+    @IBOutlet weak var progressBarView: UIProgressView!
     @IBOutlet var regionNameTopConstraint: NSLayoutConstraint!
-    @IBOutlet var progressBarBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var progressBarBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Actions
-    
+    // TODO: - add delegation to view controller
     @IBAction func downloadButtonPressed(_ sender: UIButton) {
         let animationDuration = 0.3
         if shouldShowProgressBar {

@@ -10,6 +10,21 @@ import Foundation
 
 struct MapRegion {
     let name: String
+    let parentRegionName: String?
     let subregions: [MapRegion]?
-    var isMapDownloaded: Bool
+    let continentName = "europe"
+    var isMapDownloaded: Bool = false
+    
+    var displayName: String {
+        name.capitalized
+    }
+    
+    var mapFileName: String {
+        let fileSuffix = "_2.obf.zip"
+        if let parentName = parentRegionName {
+            return "\(parentName.capitalized)_\(name)_\(continentName)\(fileSuffix)"
+        } else {
+            return "\(name.capitalized)_\(continentName)\(fileSuffix)"
+        }
+    }
 }

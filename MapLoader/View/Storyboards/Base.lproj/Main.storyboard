@@ -31,24 +31,24 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-r5-DdK">
-                                    <rect key="frame" x="16" y="36" width="382" height="16"/>
-                                    <color key="backgroundColor" red="1" green="0.53333333329999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wx-6J-1Db" customClass="UIRoundedProgressView" customModule="MapLoader" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="39" width="382" height="16"/>
+                                    <color key="tintColor" red="1" green="0.53333333329999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="16" id="8Mg-Cq-4KJ"/>
+                                        <constraint firstAttribute="height" constant="16" id="8Go-gv-du1"/>
                                     </constraints>
-                                </view>
+                                </progressView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="lrG-fS-1zu" secondAttribute="trailing" constant="16" id="4tl-09-SLx"/>
+                                <constraint firstAttribute="trailing" secondItem="4wx-6J-1Db" secondAttribute="trailing" constant="16" id="6Rr-Ew-C1s"/>
+                                <constraint firstItem="4wx-6J-1Db" firstAttribute="leading" secondItem="g7z-BF-GJw" secondAttribute="leading" constant="16" id="6mK-kA-ayr"/>
+                                <constraint firstItem="4wx-6J-1Db" firstAttribute="top" secondItem="CTB-uM-CbB" secondAttribute="bottom" constant="12" id="6wy-WU-7Nu"/>
+                                <constraint firstAttribute="bottom" secondItem="4wx-6J-1Db" secondAttribute="bottom" constant="9" id="BFn-O3-v91"/>
                                 <constraint firstItem="CTB-uM-CbB" firstAttribute="top" secondItem="g7z-BF-GJw" secondAttribute="top" constant="11" id="H2q-6V-QFr"/>
-                                <constraint firstItem="RgA-r5-DdK" firstAttribute="top" secondItem="CTB-uM-CbB" secondAttribute="bottom" constant="9" id="L9Q-DT-d8i"/>
                                 <constraint firstItem="CTB-uM-CbB" firstAttribute="leading" secondItem="g7z-BF-GJw" secondAttribute="leading" constant="15" id="LeP-Qa-va5"/>
-                                <constraint firstAttribute="bottom" secondItem="RgA-r5-DdK" secondAttribute="bottom" constant="12" id="PjY-Wl-s1A"/>
-                                <constraint firstAttribute="trailing" secondItem="RgA-r5-DdK" secondAttribute="trailing" constant="16" id="Rm5-Mr-Xwb"/>
                                 <constraint firstItem="lrG-fS-1zu" firstAttribute="top" secondItem="g7z-BF-GJw" secondAttribute="top" constant="11" id="WeG-g3-9GA"/>
-                                <constraint firstItem="RgA-r5-DdK" firstAttribute="leading" secondItem="g7z-BF-GJw" secondAttribute="leading" constant="16" id="jH2-mz-u0H"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -69,7 +69,7 @@
                     <navigationItem key="navigationItem" title="Download Maps" largeTitleDisplayMode="always" id="2dD-aa-TfW"/>
                     <connections>
                         <outlet property="freeStorageLabel" destination="lrG-fS-1zu" id="56R-dY-VYx"/>
-                        <outlet property="storageBarView" destination="RgA-r5-DdK" id="C6Z-iC-meK"/>
+                        <outlet property="storageBarView" destination="4wx-6J-1Db" id="Xsn-qJ-t7k"/>
                         <segue destination="cQD-1c-yS7" kind="show" identifier="countrySegue" id="pWJ-gn-Bi0"/>
                     </connections>
                 </tableViewController>
@@ -118,6 +118,12 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
